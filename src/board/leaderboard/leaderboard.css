@@ -1,0 +1,49 @@
+.leaderboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    justify-content: space-evenly;
+    background-color: var(--cream);
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 150px;
+    max-height: 250px;
+    overflow: auto;
+    border: 1px solid black;
+    border-top: 0px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 7px 29px 0px;
+}
+
+.title{
+    width: 100%;
+    margin: 4px 0px 16px 0px;
+    font-weight: 500;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.entry, .no-entry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 8px 0px;
+}
+
+.no-entry{
+    opacity: 0.6;
+}

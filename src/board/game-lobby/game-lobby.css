@@ -1,0 +1,53 @@
+.game-lobby-container{
+    width: 450px;
+    height: 100%;
+    background-color: var(--cyan);
+    border-radius: 8px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 7px 29px 0px;
+}
+
+.lobby-heading{
+    height: 50px;
+    width: 100%;
+}
+
+.lobby-container{
+    display: grid;
+    grid-template-columns: [first] 300px [end];
+    border: 1px solid var(--brown);
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    row-gap: 8px;
+    padding: 8px;
+    background-color: var(--cream);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+}
+
+.lobby-entry{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+    transition: box-shadow 100ms;
+}
+.lobby-entry:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.current-entry:hover{
+    box-shadow: none;
+}
+
+.lobby-user{
+    font-weight: 700;
+}
+
+.waiting-msg{
+    opacity: 0.2;
+}
