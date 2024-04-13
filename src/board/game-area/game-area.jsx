@@ -132,9 +132,9 @@ function GameArea() {
 			return (
 				<>
 					<div
-						className={`player-one-container ${profile.name === playerOne ? '' : 'current'}`}
+						className={`player-one-container ${profile.name === playerOne ? 'my-game-box' : 'current'}`}
 					>
-						<h4>Player : {playerOne}</h4>
+						<h4 className="player-name">Player : {playerOne}</h4>
 						<div className="avatar-container">{playerOne.at(0)}</div>
 						<div className="options-container">
 							{renderOption(OPTIONS.ROCK, true)}
@@ -143,7 +143,7 @@ function GameArea() {
 						</div>
 					</div>
 					<div
-						className={`player-two-container ${profile.name === playerTwo ? '' : 'current'}`}
+						className={`player-two-container ${profile.name === playerTwo ? 'my-game-box' : 'current'}`}
 					>
 						<h4>Player : {playerTwo}</h4>
 						<div className="avatar-container">{playerTwo.at(0)}</div>
@@ -162,9 +162,9 @@ function GameArea() {
 			return (
 				<>
 					<div
-						className={`player-one-container ${profile.name === playerOne ? '' : 'current'}`}
+						className={`player-one-container ${profile.name === playerOne ? 'my-game-box' : 'current'}`}
 					>
-						<h4>Player : {playerOne}</h4>
+						<h4 className="player-name">Player : {playerOne}</h4>
 						<div className="avatar-container">{playerOne.at(0)}</div>
 						<div className="options-container">
 							{renderOption(playerOneOption, false)}
@@ -172,7 +172,7 @@ function GameArea() {
 						<div className="selected-label">Selected</div>
 					</div>
 					<div
-						className={`player-two-container ${profile.name === playerTwo ? '' : 'current'}`}
+						className={`player-two-container ${profile.name === playerTwo ? 'my-game-box' : 'current'}`}
 					>
 						<h4>Player : {playerTwo}</h4>
 						<div className="avatar-container">{playerTwo.at(0)}</div>
@@ -193,9 +193,9 @@ function GameArea() {
 			return (
 				<>
 					<div
-						className={`player-one-container ${profile.name === playerOne ? '' : 'current'}`}
+						className={`player-one-container ${profile.name === playerOne ? 'my-game-box' : 'current'}`}
 					>
-						<h4>Player : {playerOne}</h4>
+						<h4 className="player-name">Player : {playerOne}</h4>
 						<div className="avatar-container">{playerOne.at(0)}</div>
 						<div className="options-container">
 							<div className={`option-without-action`}>
@@ -205,7 +205,7 @@ function GameArea() {
 						<div className="selected-label">Selecting ...</div>
 					</div>
 					<div
-						className={`player-two-container ${profile.name === playerTwo ? '' : 'current'}`}
+						className={`player-two-container ${profile.name === playerTwo ? 'my-game-box' : 'current'}`}
 					>
 						<h4>Player : {playerTwo}</h4>
 						<div className="avatar-container">{playerTwo.at(0)}</div>
@@ -224,9 +224,9 @@ function GameArea() {
 			return (
 				<>
 					<div
-						className={`player-one-container ${profile.name === playerOne ? '' : 'current'}`}
+						className={`player-one-container ${profile.name === playerOne ? 'my-game-box' : 'current'}`}
 					>
-						<h4>Player : {playerOne}</h4>
+						<h4 className="player-name">Player : {playerOne}</h4>
 						<div className="avatar-container">{playerTwo.at(0)}</div>
 						<div className="options-container">
 							<div className={`option-without-action`}>
@@ -236,7 +236,7 @@ function GameArea() {
 						<div className="selected-label">Selected</div>
 					</div>
 					<div
-						className={`player-two-container ${profile.name === playerTwo ? '' : 'current'}`}
+						className={`player-two-container ${profile.name === playerTwo ? 'my-game-box' : 'current'}`}
 					>
 						<h4>Player : {playerTwo}</h4>
 						<div className="avatar-container">{playerTwo.at(0)}</div>
@@ -319,7 +319,7 @@ function GameArea() {
 		return (
 			<>
 				<div className="player-one-container">
-					<h4>Player : {playerOne}</h4>
+					<h4 className="player-name">Player : {playerOne}</h4>
 					<div className="avatar-container">{playerOne.at(0)}</div>
 					<div className="options-container">
 						{renderOption(playerOneOption, false)}

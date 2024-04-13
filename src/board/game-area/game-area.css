@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: [first] 450px [second] 450px [end];
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 32px;
     width: 900px;
     background-color: var(--cream);
     box-shadow: rgba(0, 0, 0, 0.9) 0px 7px 29px 0px;
@@ -30,6 +30,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.my-game-box{
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.player-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
 
 .options-container{
@@ -115,3 +127,65 @@
 .play-again-btn:hover{
     box-shadow: none;
 }
+
+/**
+* tab-view
+*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .game-area-container{
+        width: 98%;
+        grid-template-columns: [ first ] 50% [ second ] 50% [ end ];
+        margin-bottom: 10px;
+        height: 98%;
+    }
+
+    .options-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .play-again-btn{
+        bottom: 50px;
+    }
+}
+
+    /**
+* mobile-view
+*/
+@media only screen and  (max-width: 480px) {
+    .game-area-container{
+        width: 98%;
+        grid-template-columns: [ first ] 50% [ second ] 50% [ end ];
+        margin-bottom: 10px;
+        height: 98%;
+    }
+
+    .avatar-container{
+        height: 60px;
+        width: 60px;
+    }
+
+    .rock-img, .paper-img, .scissors-img, .question-img, .waiting-img{
+        height: 45px;
+        width: 45px;
+    }
+
+    .option, .option-without-action{
+        height: 75px;
+        width: 75px;
+    }
+
+    .options-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        top: 30px;
+    }
+
+    .play-again-btn{
+        bottom: 50px;
+    }
+  }

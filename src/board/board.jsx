@@ -64,8 +64,10 @@ function Board() {
 		if (gameLobby.entries.length) {
 			const player = gameLobby.entries.find((el) => el.player === profile.name);
 			if (player && player.channel) {
-				const channel = LocalStorageService.get(player.channel);
-				dispatch(setGameChannel(channel));
+				setTimeout(() => {
+					const channel = LocalStorageService.get(player.channel);
+					dispatch(setGameChannel(channel));
+				});
 			}
 		}
 	}, [gameLobby.entries]);
@@ -110,7 +112,7 @@ function Board() {
 
 	return (
 		<div className="board-container">
-			<LeaderBoard />
+			{profile && profile.name && <LeaderBoard />}
 			{gameChannel.isGameVisible ? (
 				<GameArea />
 			) : (

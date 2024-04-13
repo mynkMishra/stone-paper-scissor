@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: 90px;
-    width: 150px;
+    
     max-height: 250px;
     overflow: auto;
     border: 1px solid black;
@@ -19,12 +19,24 @@
     box-shadow: rgba(0, 0, 0, 0.9) 0px 7px 29px 0px;
 }
 
+.opened{
+    width: 200px;
+}
+
+.closed{
+    width: 100px;
+}
+
 .title{
     width: 100%;
-    margin: 4px 0px 16px 0px;
+    margin: 4px 0px 4px 0px;
     font-weight: 500;
     opacity: 0.6;
     cursor: pointer;
+}
+
+.title:hover{
+    text-decoration: underline;
 }
 
 .body{
@@ -47,3 +59,48 @@
 .no-entry{
     opacity: 0.6;
 }
+
+.rank{
+    width: 20%;
+}
+
+.player{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60%;
+    margin: 0px 8px;
+}
+
+.score{
+    width: 20%;
+}
+
+.heading div{
+    font-weight: 500;
+}
+
+/**
+* tab-view
+*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .leaderboard-container{
+        left: 5%;
+    }
+  }
+
+    /**
+* mobile-view
+*/
+@media only screen and  (max-width: 480px) {
+    .leaderboard-container{
+        left: 2%;
+        padding: 4px;
+    }
+    .closed{
+        padding: 4px;
+    }
+    .opened{
+        padding: 8px;
+    }
+  }

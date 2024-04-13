@@ -26,15 +26,21 @@ function LeaderBoard() {
 		});
 	}, []);
 	return (
-		<div className="leaderboard-container">
+		<div className={`leaderboard-container ${visible ? 'opened' : 'closed'}`}>
 			<div className="title" onClick={() => setVisible(!visible)}>
 				LeaderBoard
 			</div>
 			{visible ? (
 				<div className="body">
+					<div className="entry heading">
+						<div className="rank">Rank</div>
+						<div className="player">Player</div>
+						<div className="score">Score</div>
+					</div>
 					{gameLobby.leaderboard.length ? (
-						gameLobby.leaderboard.map((el) => (
+						gameLobby.leaderboard.map((el, idx) => (
 							<div className="entry" key={el.player}>
+								<div className="rank">{idx + 1}</div>
 								<div className="player">{el.player}</div>
 								<div className="score">{el.score}</div>
 							</div>

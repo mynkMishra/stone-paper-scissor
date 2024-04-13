@@ -46,8 +46,31 @@
 
 .lobby-user{
     font-weight: 700;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .waiting-msg{
     opacity: 0.2;
 }
+
+/**
+* tab-view
+*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .game-lobby-container{
+       height: 90%;
+    }
+}
+
+  /**
+* mobile-view
+*/
+@media only screen and  (max-width: 480px) {
+    .game-lobby-container{
+        height: 90%;
+        width: 90%;
+     }
+  }
